@@ -4,7 +4,7 @@ FROM openjdk:11
 
 WORKDIR /app
 # Copier le livrable Spring dans le conteneur
-COPY target/eventsProject-1.0.0.jar /app/eventsProject-1.0.0.jar
+COPY ./target/eventsProject-1.0.0.jar /app/eventsProject-1.0.0.jar
 
 
 # Commande à exécuter lorsque le conteneur démarre
