@@ -2,9 +2,9 @@ version: '3.8'
 
 services:
   spring-boot-app:
-    image: mustapha69/spring-boot-app
+    image: mustapha69/spring-boot-app:148
     ports:
-      - "9091:8080"  # Map host's port 9091 to container's port 8080
+      - "9096:9096"
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/dbd
       SPRING_DATASOURCE_USERNAME: root
@@ -14,16 +14,8 @@ services:
 
   mysql-db:
     image: mysql:latest
+    ports:
+      - "9000:3306"   # Map host port 9000 to container's MySQL port 3306
     environment:
       MYSQL_ROOT_PASSWORD: azertyP123
       MYSQL_DATABASE: dbd
-      MYSQL_USER: root
-      MYSQL_PASSWORD: azertyP123
-    ports:
-      - "3306:3306"
-    volumes:
-      - mysql-data:/var/lib/mysql
-
-volumes:
-  mysql-data:
-    
