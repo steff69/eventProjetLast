@@ -1,4 +1,4 @@
-version: '2.27.1'
+version: '2'
 
 services:
   spring-boot-app:
@@ -15,7 +15,7 @@ services:
   mysql-db:
     image: mysql:latest
     ports:
-      - "9000:3306"   # Map host port 9000 to container's MySQL port 3306
+      - "9001:3306"   # Map host port 9000 to container's MySQL port 3306
     environment:
       MYSQL_ROOT_PASSWORD: azertyP123
       MYSQL_DATABASE: dbd
