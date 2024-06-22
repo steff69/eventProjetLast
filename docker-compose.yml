@@ -4,7 +4,7 @@ services:
   spring-boot-app:
     image: mustapha69/spring-boot-app:${BUILD_ID}
     ports:
-      - "9096:9096"
+      - "9090:9096"
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/dbd
       SPRING_DATASOURCE_USERNAME: root
